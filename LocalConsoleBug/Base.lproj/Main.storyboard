@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OwP-ep-bc6">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,27 +21,35 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-CQ-uLj">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="238.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="178.66666666666666"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="A"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Push"/>
                                         <connections>
                                             <segue destination="sVV-xe-kSM" kind="show" id="RVm-dM-Rwe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-0Z-N4W">
-                                        <rect key="frame" x="0.0" y="238.33333333333331" width="393" height="238.33333333333331"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-dP-5Oe">
+                                        <rect key="frame" x="0.0" y="178.66666666666669" width="393" height="179"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="B"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Modal"/>
                                         <connections>
-                                            <segue destination="vhV-FV-ISS" kind="show" id="vdh-tu-qvj"/>
+                                            <segue destination="vhV-FV-ISS" kind="presentation" id="0uV-o5-nvf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-0Z-N4W">
+                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="178.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Show"/>
+                                        <connections>
+                                            <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nY-2u-owG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l44-MD-5Ej">
-                                        <rect key="frame" x="0.0" y="476.66666666666657" width="393" height="238.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="536.33333333333337" width="393" height="178.66666666666663"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="C"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Hide"/>
                                         <connections>
-                                            <segue destination="ir2-rv-RS4" kind="show" id="bJI-pN-mGh"/>
+                                            <action selector="hide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxG-yz-ecb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -66,7 +75,7 @@
             <objects>
                 <viewController id="vhV-FV-ISS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yDE-Xb-6vX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DeA-Lj-wfa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -76,22 +85,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vss-vx-jMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2018" y="194"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tQT-bJ-ibD">
-            <objects>
-                <viewController id="ir2-rv-RS4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zf3-5Z-JvG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="wim-Hc-w60"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ehX-Hb-kmi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UF4-hd-SDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2018" y="876"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wol-uu-4du">
